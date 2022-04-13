@@ -1,2 +1,2 @@
 # djnago_tutorial
-[djangoのチュートリアル](https://docs.djangoproject.com/ja/4.0/intro/)をやってみる
+[djangoの公式チュートリアル](https://docs.djangoproject.com/ja/4.0/intro/)をやってみる

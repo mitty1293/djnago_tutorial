@@ -7,6 +7,7 @@
     poetry install
     ```
 2. djangoのインストールが出来たら[はじめての Django アプリ作成、その 1](https://docs.djangoproject.com/ja/4.0/intro/tutorial01/)からスタート
+3. コマンド実行時は`poetry run <command>`とすること
 ## Referenses
 * https://rasulkireev.com/managing-django-with-poetry/
 * https://docs.djangoproject.com/ja/4.0/intro/install/

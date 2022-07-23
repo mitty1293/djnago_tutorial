@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block header %}
+<div class="alert alert-primary" role="alert">
+    <h3>My SNS</h3>
+    {{ user.username }}
+</div>
+{% endblock header %}
+
+{% block content %}
+<div class="container">
+    <a class="btn btn-info" href="{% url 'create' %}" role="button">Create</a>
+    {% for item in object_list %}
+    <div class="alert alert-success" role="alert">
+        <p>Title: <a href="{% url 'detail' item.pk %}">{{ item.title }}</a></p>
+        <p>Author: {{ item.author }}</p>
+        <a class="btn btn-primary disabled" href="#" role="button">Like {{ item.like }}</a>
+        <a class="btn btn-primary disabled" href="#" role="button">Read {{ item.read }}</a>
+    </div>
+    {% endfor %}
+    <a class="btn btn-secondary" href="{% url 'logout' %}" role="button">Logout</a>
+</div>
+{% endblock content %}

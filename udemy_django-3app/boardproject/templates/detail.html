@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block header %}
+<div class="alert alert-primary" role="alert">
+    <h3>Detail Page</h3>
+    {{ user.username }}
+</div>
+{% endblock header %}
+
+{% block content %}
+<div class="container">
+    <div class="alert alert-success" role="alert">
+        <p>Title: {{ object.title }}</p>
+        <p>Author: {{ object.author }}</p>
+        <p><img src="{{ object.sns_images.url }}" width="300"></p>
+        <a class="btn btn-primary" href="{% url 'like' object.pk %}" role="button">Like</a>
+        <a class="btn btn-primary" href="{% url 'read' object.pk %}" role="button">Mark as read</a>
+    </div>
+    <a class="btn btn-primary" href="{% url 'list' %}" role="button">Back</a>
+    <a class="btn btn-secondary" href="{% url 'logout' %}" role="button">Logout</a>
+</div>
+{% endblock content %}

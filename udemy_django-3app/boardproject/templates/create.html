@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block header %}
+<div class="alert alert-primary" role="alert">
+    <h3>Create</h3>
+    {{ user.username }}
+</div>
+{% endblock header %}
+
+{% block content %}
+{% if user.is_authenticated %}
+<form method="post" enctype="multipart/form-data">{% csrf_token %}
+    <p>Title<input type="text" name="title"></p>
+    <p>Content<input type="text" name="content"></p>
+    <p><input type="file" name="sns_images"></p>
+    <input type="hidden" name="author" value="{{ user.username }}">
+    <input type="submit" value="Create">
+</form>
+{% else %}
+<a href="{% url 'login' %}">Please Login</a>
+{% endif %}
+{% endblock content %}

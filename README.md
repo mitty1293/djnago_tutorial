@@ -1,2 +1,2 @@
 # learn_django
-Djangoの
+Djangoの学習用リポジトリ

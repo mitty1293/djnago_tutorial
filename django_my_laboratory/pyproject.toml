@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "django-my-laboratory"
+version = "0.1.0"
+description = "Try different ways to use django"
+authors = ["mitty1293 <k.fmichi@gmail.com>"]
+readme = "README.md"
+packages = [{include = "django_my_laboratory"}]
+
+[tool.poetry.dependencies]
+python = "3.10.8"
+Django = "^4.1.4"
+django-debug-toolbar = "^3.8.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

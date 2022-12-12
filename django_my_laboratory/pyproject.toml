@@ -8,8 +8,8 @@ packages = [{include = "django_my_laboratory"}]
 
 [tool.poetry.dependencies]
 python = "3.10.8"
-Django = "^4.1.4"
 django-debug-toolbar = "^3.8.1"
+django = "^4.1.4"
 
 
 [build-system]

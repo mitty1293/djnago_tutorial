@@ -1,0 +1,1 @@
+[{"model": "form.department", "pk": 1, "fields": {"name": "システム開発部"}}, {"model": "form.department", "pk": 2, "fields": {"name": "営業部"}}, {"model": "form.department", "pk": 3, "fields": {"name": "財務部"}}, {"model": "form.department", "pk": 4, "fields": {"name": "製造部"}}, {"model": "form.department", "pk": 5, "fields": {"name": "経営企画部"}}]

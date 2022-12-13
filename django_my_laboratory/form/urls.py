@@ -1,8 +1,8 @@
 from django.urls import path
-from form import views
+from form.views import post_model_formset
 
 app_name = "form"
 
 urlpatterns = [
-    # path("formset/", views.Form.as_view(), name="hoge"),
+    path("model_formset/", post_model_formset.add, name="post_model_formset"),
 ]

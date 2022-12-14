@@ -9,11 +9,11 @@ class EmployeeForm(forms.ModelForm):
         fields = "__all__"
 
 
-BookFormset = forms.modelformset_factory(Employee, form=EmployeeForm, extra=1)
+EmployeeFormset = forms.modelformset_factory(Employee, form=EmployeeForm, extra=1)
 
 
 def add(request):
-    formset = EmployeeForm(request.POST or None)
+    formset = EmployeeFormset(request.POST or None)
     if request.method == "POST" and formset.is_valid():
         formset.save()
         return redirect("form:post_model_formset")

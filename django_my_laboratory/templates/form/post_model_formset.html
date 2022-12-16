@@ -4,13 +4,17 @@
 <form action="" method="post">{% csrf_token %}
     {{ formset.management_form }}
     {% for form in formset %}
-        {% for field in form.visible_fields %}
-            <label for="{{ field.id_for_label }}">{{ field.label_tag }}</label>
-            {{ field }}
-        {% endfor %}
-        {% for field in form.hidden_field %}
-            {{ field }}
-        {% endfor %}
+        <div class="col-sm-4">
+            {% for field in form.visible_fields %}
+                <div class="form-group">
+                    <label for="{{ field.id_for_label }}">{{ field.label_tag }}</label>
+                    {{ field }}
+                </div>
+            {% endfor %}
+            {% for field in form.hidden_fields %}
+                {{ field }}
+            {% endfor %}
+        </div>
     {% endfor %}
     <button type="submit" class="btn btn-secondary">Submit</button>
 </form>
